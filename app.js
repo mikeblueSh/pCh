@@ -477,6 +477,10 @@ async function editChannelMassage(to_channel_id, to_access_hash, links, messageI
     }
 }
 
+function checkMTProtoLink(link) {
+    return /(?=.*proxy\?server)(?=.*secret)/.test(link)
+}
+
 async function getPhotoAndSend(media, to_channel_id, to_access_hash, captionText, replyToMsgId, result) {
 
 
